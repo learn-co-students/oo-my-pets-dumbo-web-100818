@@ -77,11 +77,21 @@ class Owner
   end
 
   def list_pets
-    @pets.each do |type, pet_array|
-      print "#{pet_array.count} #{type}, "
-    end
+    # @pets.each do |type, pet_array|
+    #   print "#{pet_array.count} #{type}, "
+      fish_count = @pets[:fishes].count
+      dog_count = @pets[:dogs].count
+      cat_count = @pets[:cats].count
+      # print "#{fish_count} fish, "
+      # print "#{dog_count} dog(s),"
+      # print "#{cat_count} cat(s)"
+      "I have #{fish_count} fish, #{dog_count} dog(s), and #{cat_count} cat(s)."
   end
 end
 
+# -git add . #add the changes you've made in the file tree
+# -git status #lets you see the files that are staged to be commited
+# -git commit -m ""   #this is adding a message on what you've udpated
+# -git push           #push to git
 #
 #expect(owner.list_pets).to eq("I have 2 fish, 3 dog(s), and 1 cat(s).")
