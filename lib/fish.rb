@@ -6,4 +6,8 @@ class Fish
     @mood = 'nervous'
   # # code goes here
   end
+
+
+
+
 end
